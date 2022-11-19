@@ -6,6 +6,8 @@ import pytesseract
 from PIL import Image, ImageEnhance
 import numpy as np
 
+if not os.path.exists('output_images/'):
+    os.makedirs('output_images/')
 for f in glob.glob('output_images/*'):
     os.remove(f)
 filename = input("Insert the exact filename in the 'input_pdf' folder: ")
