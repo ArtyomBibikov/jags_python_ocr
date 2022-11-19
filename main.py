@@ -11,7 +11,7 @@ if not os.path.exists('output_images/'):
 for f in glob.glob('output_images/*'):
     os.remove(f)
 filename = input("Insert the exact filename in the 'input_pdf' folder: ")
-pdfs = r"C:\Users\JAG\PycharmProjects\text_recognition\input_pdf\{}".format(filename)
+pdfs = r"input_pdf\{}".format(filename)
 pages = convert_from_path(pdfs, 350, poppler_path=r"utils")
 i = 1
 for page in pages:
@@ -19,7 +19,7 @@ for page in pages:
     page.save(image_name, "JPEG")
     i = i + 1
 
-indir = r"C:/Users/JAG/PycharmProjects/text_recognition/output_images/"
+indir = r"output_images/"
 for root, dirs, filenames in os.walk(indir):
     for filename in filenames:
         print('~~~~~' + filename + '~~~~')
