@@ -2,6 +2,7 @@ import cv2
 import pytesseract
 from PIL import Image, ImageEnhance
 import numpy as np
+import os
 
 
 def get_text():
